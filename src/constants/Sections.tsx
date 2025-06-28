@@ -1,4 +1,5 @@
 import placeholder from "../assets/placeholder.jpeg";
+
 export const SECTIONS = [
   {
     image: placeholder,
