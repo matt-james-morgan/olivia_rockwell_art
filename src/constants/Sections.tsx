@@ -7,31 +7,29 @@ import {
   WATERCOLOR_PAINTINGS,
 } from "../lib/images";
 
-console.log(WATERCOLOR_PAINTINGS);
-
 export const SECTIONS = [
   {
-    image: COLLAGE.ModelStudy2025,
+    image: COLLAGE["Model Study, 2025"],
     label: "Collage",
   },
   {
-    image: DRAWINGS["101WaystoDrawDogs2025"],
+    image: DRAWINGS["101 Ways to Draw Dogs, 2025"],
     label: "Drawings",
   },
   {
-    image: ILLUSTRATION.HoleintheWall2025,
+    image: ILLUSTRATION["Hole in the Wall, 2025"],
     label: "Illustration",
   },
   {
-    image: OIL_PAINTINGS.AGoodBook2024,
+    image: OIL_PAINTINGS["A Good Book, 2024"],
     label: "Oil Paintings",
   },
   {
-    image: SCREEN_PRINTS.MindComposition12024,
+    image: SCREEN_PRINTS["Mind Composition 1, 2024"],
     label: "Screen Prints",
   },
   {
-    image: WATERCOLOR_PAINTINGS.BorealRenaissance2025,
-    label: "Watercolur Paintings",
+    image: WATERCOLOR_PAINTINGS["Boreal Renaissance, 2025"],
+    label: "Watercolour Paintings",
   },
 ];

@@ -4,7 +4,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Menu } from "lucide-react"; // <-- Hamburger icon
+import { Menu } from "lucide-react";
 import { SECTIONS } from "../constants/Sections";
 import { useNavigate } from "react-router-dom";
 
@@ -15,7 +15,12 @@ const Nav = () => {
   };
   return (
     <div className="w-full flex justify-between items-center px-4 py-2 bg-red">
-      <h1 className="text-xl font-bold">Olivia Rockwell Art</h1>
+      <h1
+        className="text-xl font-bold cursor-pointer"
+        onClick={() => handleNav("/")}
+      >
+        Olivia Rockwell Art
+      </h1>
 
       <DropdownMenu>
         <DropdownMenuTrigger className="focus:outline-none focus-visible:ring-0">
