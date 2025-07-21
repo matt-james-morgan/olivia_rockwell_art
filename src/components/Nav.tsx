@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
   const navigate = useNavigate();
-  const handleNav = (nav) => {
+  const handleNav = (nav: string) => {
     navigate(nav);
   };
   return (

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const navigate = useNavigate();
-  const handleNav = (nav) => {
+  const handleNav = (nav: string) => {
     navigate(nav);
   };
   return (
@@ -16,7 +16,10 @@ const Dashboard = () => {
               handleNav(section.label);
             }}
           >
-            <img className="w-125 h-75 object-cover" src={section.image} />
+            <img
+              className="w-125 h-75 object-cover"
+              src={section.image as string}
+            />
             <h2 className="pt-4 pl-8">{section.label}</h2>
           </div>
         );
