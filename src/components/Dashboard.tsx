@@ -17,10 +17,7 @@ const Dashboard = () => {
               handleNav(section.label);
             }}
           >
-            <img
-              className="w-125 h-75 object-cover"
-              src={section.image as string}
-            />
+            <img className="w-125 h-75 object-cover" src={section.image} />
             <h2 className="pt-4 pl-8">{section.label}</h2>
           </div>
         );
