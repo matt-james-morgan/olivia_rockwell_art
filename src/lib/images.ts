@@ -1,13 +1,13 @@
 import { loadImages } from "./utils";
 
 export const COLLAGE = loadImages(
-  import.meta.glob("../assets/COLLAGE/*.jpeg", {
+  import.meta.glob("../assets/collage/*.jpeg", {
     eager: true,
     import: "default",
   })
 );
 export const DRAWINGS = loadImages(
-  import.meta.glob("../assets/DRAWINGS/*.jpeg", {
+  import.meta.glob("../assets/drawings/*.jpeg", {
     eager: true,
     import: "default",
   })
