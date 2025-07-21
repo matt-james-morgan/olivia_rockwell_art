@@ -11,6 +11,7 @@ const Dashboard = () => {
       {SECTIONS.map((section) => {
         return (
           <div
+            key={section.label}
             className="flex-col p-8"
             onClick={() => {
               handleNav(section.label);
