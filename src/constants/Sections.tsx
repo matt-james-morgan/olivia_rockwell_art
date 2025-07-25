@@ -9,27 +9,27 @@ import {
 
 export const SECTIONS = [
   {
-    image: COLLAGE["Model Study, 2025"],
-    label: "Collage",
+    image: WATERCOLOR_PAINTINGS["Nova Scotland - Cows, 2025"],
+    label: "Watercolour Paintings",
   },
   {
-    image: DRAWINGS["101 Ways to Draw Dogs, 2025"],
+    image: OIL_PAINTINGS["The University Student’s Longing, 2024"],
+    label: "Oil Paintings",
+  },
+  {
+    image: DRAWINGS["Vacuum Tube, 2024"],
     label: "Drawings",
   },
   {
-    image: ILLUSTRATION["Hole in the Wall, 2025"],
-    label: "Illustration",
+    image: COLLAGE["Scores and Paper - Loki, 2025"],
+    label: "Collage",
   },
   {
-    image: OIL_PAINTINGS["A Good Book, 2024"],
-    label: "Oil Paintings",
+    image: ILLUSTRATION["Hot Dog, 2024"],
+    label: "Illustration",
   },
   {
     image: SCREEN_PRINTS["Mind Composition 1, 2024"],
     label: "Screen Prints",
-  },
-  {
-    image: WATERCOLOR_PAINTINGS["Boreal Renaissance, 2025"],
-    label: "Watercolour Paintings",
   },
 ];
