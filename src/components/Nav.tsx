@@ -42,6 +42,13 @@ const Nav = () => {
                 <h2>{section.label}</h2>
               </Button>
             ))}
+            <Button
+              variant="ghost"
+              className="justify-start text-lg"
+              onClick={() => handleNav("About")}
+            >
+              <h2>About</h2>
+            </Button>
           </div>
         </SheetContent>
       </Sheet>

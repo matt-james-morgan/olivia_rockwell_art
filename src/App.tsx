@@ -2,6 +2,7 @@ import "./App.css";
 import Dashboard from "./components/Dashboard";
 import Nav from "./components/Nav";
 import Gallery from "./components/Gallery";
+import About from "./components/About";
 import {
   BrowserRouter as Router,
   Routes,
@@ -100,6 +101,7 @@ const AnimatedRoutes = () => {
               />
             }
           />
+          <Route path="/about" element={<About />} />
         </Routes>
       </motion.div>
     </AnimatePresence>
