@@ -24,12 +24,17 @@ const Gallery = ({ images }: GalleryProps) => {
               <h2 className="pt-4 text-lg font-semibold">{section.label}</h2>
             </div>
           </DialogTrigger>
-          <DialogContent className="max-w-[90vw] max-h-[90vh] p-6">
-            <img
-              className="max-w-full max-h-[80vh] object-contain rounded shadow-lg"
-              src={section.image}
-              alt={section.label}
-            />
+          <DialogContent
+            className="max-w-[90vw] max-h-[90vh] p-6 pt-12"
+            style={{ backgroundColor: "hsl(38, 74%, 92%)" }}
+          >
+            <div className="flex justify-center items-center w-full h-full">
+              <img
+                className="max-w-full max-h-[75vh] object-contain rounded shadow-lg"
+                src={section.image}
+                alt={section.label}
+              />
+            </div>
           </DialogContent>
         </Dialog>
       ))}

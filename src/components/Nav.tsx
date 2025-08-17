@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
 import { SECTIONS } from "../constants/Sections";
 import { useNavigate } from "react-router-dom";
 
@@ -13,6 +12,22 @@ const Nav = () => {
     setOpen(false);
     navigate(nav);
   };
+  const HamburgerIcon = ({ className }: { className?: string }) => (
+    <svg
+      className={className}
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    >
+      <line x1="3" y1="6" x2="21" y2="6" />
+      <line x1="3" y1="12" x2="21" y2="12" />
+      <line x1="3" y1="18" x2="21" y2="18" />
+    </svg>
+  );
 
   return (
     <div className="w-full flex justify-between items-center px-4 py-2 bg-red">
@@ -27,7 +42,7 @@ const Nav = () => {
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <div className="p-4 rounded-md cursor-pointer">
-            <Menu className="h-8 w-8 text-[#415d35]" />
+            <HamburgerIcon className="h-8 w-8 text-[#415d35]" />
           </div>
         </SheetTrigger>
         <SheetContent side="right" className="bg-inherit">
