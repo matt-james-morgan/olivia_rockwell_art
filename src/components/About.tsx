@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { OIL_PAINTINGS } from "@/lib/images";
 
 // Custom Instagram SVG icon for better branding consistency
 const InstagramIcon = ({ className }: { className?: string }) => (
@@ -36,7 +37,7 @@ const About = () => {
             <div className="sticky top-8">
               <div className="relative">
                 <img
-                  src="/src/assets/oil_paintings/Baroque Self Portrait, 2024.jpeg"
+                  src={OIL_PAINTINGS["Baroque Self Portrait, 2024"] as string}
                   alt="Olivia Rockwell Self Portrait - Baroque style oil painting, 2024"
                   className="w-full max-w-[500px] mx-auto object-contain rounded-lg shadow-lg"
                 />
