@@ -1,4 +1,3 @@
-import React from "react";
 import bee from "../assets/bee.png";
 
 const Footer = () => {
