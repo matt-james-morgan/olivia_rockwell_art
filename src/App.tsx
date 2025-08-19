@@ -3,6 +3,7 @@ import Dashboard from "./components/Dashboard";
 import Nav from "./components/Nav";
 import Gallery from "./components/Gallery";
 import About from "./components/About";
+import Footer from "./components/Footer";
 import {
   BrowserRouter as Router,
   Routes,
@@ -113,6 +114,7 @@ function App() {
     <Router>
       <Nav />
       <AnimatedRoutes />
+      <Footer />
     </Router>
   );
 }

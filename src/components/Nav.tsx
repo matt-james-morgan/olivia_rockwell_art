@@ -29,7 +29,7 @@ const Nav = () => {
             <HamburgerIcon />
           </div>
         </SheetTrigger>
-        <SheetContent side="right" className="bg-inherit">
+        <SheetContent side="right" className="bg-[#fdeaca]">
           <div className="flex flex-col gap-4 mt-16">
             {SECTIONS.map((section) => (
               <Button
