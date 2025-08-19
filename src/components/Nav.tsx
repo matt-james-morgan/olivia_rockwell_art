@@ -30,7 +30,7 @@ const Nav = () => {
           </div>
         </SheetTrigger>
         <SheetContent side="right" className="bg-[#fdeaca]">
-          <div className="flex flex-col gap-4 mt-16">
+          <div className="flex flex-col gap-4 mt-16 bg-[#fdeaca]">
             {SECTIONS.map((section) => (
               <Button
                 key={section.label}
