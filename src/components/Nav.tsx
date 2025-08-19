@@ -32,22 +32,20 @@ const Nav = () => {
         <SheetContent side="right" className="bg-[#fdeaca]">
           <div className="flex flex-col gap-4 mt-16 bg-[#fdeaca]">
             {SECTIONS.map((section) => (
-              <Button
+              <div
                 key={section.label}
-                variant="ghost"
-                className="justify-start text-lg bg-[#fdeaca] hover:bg-transparent active:bg-transparent focus:ring-0 focus:outline-none focus:bg-transparent"
+                className="justify-start text-lg cursor-pointer hover:opacity-70 transition-opacity py-2 px-4 text-black"
                 onClick={() => handleNav(section.label)}
               >
                 <h2>{section.label}</h2>
-              </Button>
+              </div>
             ))}
-            <Button
-              variant="ghost"
-              className="justify-start text-lg bg-[#fdeaca] hover:bg-transparent active:bg-transparent focus:ring-0 focus:outline-none focus:bg-transparent"
-              onClick={() => handleNav("About")}
+            <div
+              className="justify-start text-lg cursor-pointer hover:opacity-70 transition-opacity py-2 px-4 text-black"
+              onClick={() => handleNav("/about")}
             >
               <h2>About</h2>
-            </Button>
+            </div>
           </div>
         </SheetContent>
       </Sheet>
