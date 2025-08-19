@@ -34,14 +34,16 @@ const Nav = () => {
             {SECTIONS.map((section) => (
               <Button
                 key={section.label}
-                className="justify-start text-lg bg-[#fdeaca]"
+                variant="ghost"
+                className="justify-start text-lg bg-[#fdeaca] hover:bg-transparent active:bg-transparent focus:ring-0 focus:outline-none focus:bg-transparent"
                 onClick={() => handleNav(section.label)}
               >
                 <h2>{section.label}</h2>
               </Button>
             ))}
             <Button
-              className="justify-start text-lg bg-[#fdeaca] "
+              variant="ghost"
+              className="justify-start text-lg bg-[#fdeaca] hover:bg-transparent active:bg-transparent focus:ring-0 focus:outline-none focus:bg-transparent"
               onClick={() => handleNav("About")}
             >
               <h2>About</h2>
