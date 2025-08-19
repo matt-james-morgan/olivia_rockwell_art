@@ -34,16 +34,14 @@ const Nav = () => {
             {SECTIONS.map((section) => (
               <Button
                 key={section.label}
-                variant="ghost"
-                className="justify-start text-lg"
+                className="justify-start text-lg bg-[#fdeaca]"
                 onClick={() => handleNav(section.label)}
               >
                 <h2>{section.label}</h2>
               </Button>
             ))}
             <Button
-              variant="ghost"
-              className="justify-start text-lg"
+              className="justify-start text-lg bg-[#fdeaca] "
               onClick={() => handleNav("About")}
             >
               <h2>About</h2>
