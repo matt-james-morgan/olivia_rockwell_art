@@ -1,4 +1,5 @@
 import "./App.css";
+import { Analytics } from "@vercel/analytics/react";
 import Dashboard from "./components/Dashboard";
 import Nav from "./components/Nav";
 import Gallery from "./components/Gallery";
@@ -115,6 +116,7 @@ function App() {
       <Nav />
       <AnimatedRoutes />
       <Footer />
+      <Analytics />
     </Router>
   );
 }
