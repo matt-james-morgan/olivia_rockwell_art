@@ -36,3 +36,9 @@ export const WATERCOLOR_PAINTINGS = loadImages(
     import: "default",
   })
 );
+export const NEW_WORKS = loadImages(
+  import.meta.glob(["../assets/new_works/*.jpeg", "../assets/new_works/*.jpg"], {
+    eager: true,
+    import: "default",
+  })
+);

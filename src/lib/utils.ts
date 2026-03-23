@@ -9,7 +9,7 @@ export function loadImages(glob: Record<string, unknown>) {
   return Object.fromEntries(
     Object.entries(glob).map(([path, mod]) => {
       const filename = path.split("/").pop() || "";
-      const cleanKey = filename.replace(".jpeg", "");
+      const cleanKey = filename.replace(/\.(jpeg|jpg)$/, "");
       return [cleanKey, mod];
     })
   );

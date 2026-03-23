@@ -15,6 +15,7 @@ import {
   COLLAGE,
   DRAWINGS,
   ILLUSTRATION,
+  NEW_WORKS,
   OIL_PAINTINGS,
   SCREEN_PRINTS,
   WATERCOLOR_PAINTINGS,
@@ -100,6 +101,17 @@ const AnimatedRoutes = () => {
                     image: image as string,
                   })
                 )}
+              />
+            }
+          />
+          <Route
+            path="/new works"
+            element={
+              <Gallery
+                images={Object.entries(NEW_WORKS).map(([label, image]) => ({
+                  label,
+                  image: image as string,
+                }))}
               />
             }
           />
