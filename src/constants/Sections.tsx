@@ -2,7 +2,6 @@ import {
   COLLAGE,
   DRAWINGS,
   ILLUSTRATION,
-  NEW_WORKS,
   OIL_PAINTINGS,
   SCREEN_PRINTS,
   WATERCOLOR_PAINTINGS,
@@ -32,9 +31,5 @@ export const SECTIONS = [
   {
     image: SCREEN_PRINTS["Mind Composition 1, 2024"],
     label: "Screen Prints",
-  },
-  {
-    image: NEW_WORKS["Pennies From Heaven, 2025"],
-    label: "New Works",
   },
 ];

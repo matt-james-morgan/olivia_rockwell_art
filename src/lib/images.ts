@@ -13,7 +13,7 @@ export const DRAWINGS = loadImages(
   })
 );
 export const ILLUSTRATION = loadImages(
-  import.meta.glob("../assets/illustration/*.jpeg", {
+  import.meta.glob(["../assets/illustration/*.jpeg", "../assets/illustration/*.jpg"], {
     eager: true,
     import: "default",
   })
@@ -32,12 +32,6 @@ export const OIL_PAINTINGS = loadImages(
 );
 export const WATERCOLOR_PAINTINGS = loadImages(
   import.meta.glob("../assets/watercolour_paintings/*.jpeg", {
-    eager: true,
-    import: "default",
-  })
-);
-export const NEW_WORKS = loadImages(
-  import.meta.glob(["../assets/new_works/*.jpeg", "../assets/new_works/*.jpg"], {
     eager: true,
     import: "default",
   })
