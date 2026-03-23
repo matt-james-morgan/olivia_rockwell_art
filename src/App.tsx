@@ -1,4 +1,5 @@
 import "./App.css";
+import { useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import Dashboard from "./components/Dashboard";
 import Nav from "./components/Nav";
@@ -21,6 +22,14 @@ import {
   WATERCOLOR_PAINTINGS,
 } from "./lib/images";
 import { AnimatePresence, motion } from "framer-motion";
+
+const ScrollToTop = () => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+  return null;
+};
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -125,6 +134,7 @@ const AnimatedRoutes = () => {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Nav />
       <AnimatedRoutes />
       <Footer />
