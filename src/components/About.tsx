@@ -51,41 +51,42 @@ const About = () => {
               <div className="prose prose-lg max-w-none text-foreground leading-relaxed">
                 <p className="text-xl mb-8 font-light text-foreground/90 leading-relaxed">
                   Olivia Rockwell is a visual artist currently studying at Nova
-                  Scotia College of Art and Design University. She has
-                  participated in "Matrix" a group exhibition held at the Anna
-                  Leonowens Gallery in Halifax, and has been NACC's Artist of
-                  the Month in December 2025.
+                  Scotia College of Art and Design University. Her solo show
+                  "In the Shoes of Someone New" at the Anna Leonowens Gallery
+                  in Halifax was the culmination of her practice at NSCAD. She
+                  has participated in "Matrix" a group exhibition held at the
+                  Anna Leonowens Gallery, and "Surrealist Resistance" a group
+                  exhibition in the NSCAD Library. Rockwell has been NACC's
+                  Artist of the Month in December 2025 in Yellowknife, NWT.
                 </p>
 
                 <p className="mb-8 text-foreground/80 leading-relaxed">
                   Her work spans multiple disciplines but focuses most on
                   painting and drawing. She enjoys playing with the
                   juxtaposition between realism and conceptuality in artwork—the
-                  ebb and flow of thought and representation evokes her
-                  interest. How colour, form, dimension, and other principles of
-                  art can convey chaos to calm or sadness to serendipity
-                  fascinates her creative process.
+                  ebb and flow of thought and representation evoke her interest.
                 </p>
 
                 <p className="mb-8 text-foreground/80 leading-relaxed">
-                  Olivia is interested in people and creatures, their emotions,
-                  and how she can mimic the things she sees onto a page or
-                  canvas. Her artistic practice is deeply rooted in observation
-                  and emotional translation.
+                  Rockwell's practice is centred around portraiture and
+                  representing the innate life that comes from living and
+                  experiencing. Her artistic practice is deeply rooted emotional
+                  translation and paying homage to the cycle of creativity that
+                  travels from artist to artist.
                 </p>
 
                 <p className="mb-8 text-foreground/80 leading-relaxed">
                   Growing up in Yellowknife, Canada, her childhood was filled
                   with multidisciplinary art, music, dance, and theatre that
-                  fueled her appreciation and love of the arts. The freezing
-                  cold days influenced her to stay indoors to draw or sing and
+                  fuelled her appreciation and love of the arts. The freezing
+                  wintry days influenced her to stay indoors to draw or sing and
                   to be creative.
                 </p>
 
                 <p className="mb-12 text-foreground/80 leading-relaxed">
-                  Later on, Olivia decided to focus on visual art as it was the
-                  medium she felt she had barely scratched the surface of and
-                  wanted to learn more about. However, she continues to find
+                  Later on, Rockwell decided to focus on visual art as it was
+                  the medium she felt she had barely scratched the surface of
+                  and wanted to learn more about. However, she continues to find
                   spaces in her practice to incorporate music and drama. The
                   Northwest Territories also helped her appreciate the beauty
                   and absurdity of nature—from the ethereal northern lights to
