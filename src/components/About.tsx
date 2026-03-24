@@ -13,7 +13,7 @@ const About = () => {
   const handleInstagramClick = () => {
     // Add your Instagram URL here
     window.open(
-      "https://instagram.com/olivia.rockwell.art",
+      "https://www.instagram.com/_arty_olive_/",
       "_blank",
       "noopener,noreferrer"
     );
