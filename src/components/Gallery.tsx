@@ -20,6 +20,8 @@ const Gallery = ({ images }: GalleryProps) => {
                 className="w-[300px] h-[200px] object-contain rounded shadow-md"
                 src={section.image}
                 alt={section.label}
+                loading="lazy"
+                decoding="async"
               />
               <h2 className="pt-4 text-lg font-semibold">{section.label}</h2>
             </div>

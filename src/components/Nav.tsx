@@ -18,8 +18,10 @@ const Nav = () => {
         className="text-3xl font-light cursor-pointer"
         onClick={() => handleNav("/")}
       >
-        <h1>Olivia Rockwell</h1>
-        <h1>Fine Art</h1>
+        <h1>
+          <span className="block">Olivia Rockwell</span>
+          <span className="block">Fine Art</span>
+        </h1>
       </div>
 
       <Sheet open={open} onOpenChange={setOpen}>

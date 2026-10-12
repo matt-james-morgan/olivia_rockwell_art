@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://olivia-rockwell-art.vercel.app/sitemap.xml

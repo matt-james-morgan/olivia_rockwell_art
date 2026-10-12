@@ -38,7 +38,7 @@ const About = () => {
               <div className="relative">
                 <img
                   src={headshot}
-                  alt="Olivia Rockwell"
+                  alt="Portrait of artist Olivia Rockwell"
                   className="w-full max-w-[500px] mx-auto object-contain rounded-lg shadow-lg"
                 />
               </div>
