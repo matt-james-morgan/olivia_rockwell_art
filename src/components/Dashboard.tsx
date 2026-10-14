@@ -1,5 +1,6 @@
 import { SECTIONS } from "../constants/Sections";
 import { useNavigate } from "react-router-dom";
+import { activateOnKey } from "@/lib/a11y";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -7,21 +8,26 @@ const Dashboard = () => {
     navigate(nav);
   };
   return (
-    <div className="flex justify-center flex-wrap">
+    // Phones: one full-width column. Larger screens: the original wrapped 500×300 tiles.
+    <div className="grid grid-cols-1 gap-10 py-4 sm:flex sm:flex-wrap sm:justify-center sm:gap-0 sm:py-0">
       {SECTIONS.map((section) => {
         return (
           <div
             key={section.label}
-            className="flex-col p-8"
+            role="link"
+            tabIndex={0}
+            onKeyDown={activateOnKey}
+            className="min-w-0 cursor-pointer sm:p-8"
             onClick={() => {
               handleNav(section.label);
             }}
           >
             <img
-              className="w-125 h-75 object-cover"
+              className="block w-full aspect-[5/3] object-cover sm:w-125 sm:h-75 sm:aspect-auto"
               src={section.image as string}
+              alt={section.label}
             />
-            <h2 className="pt-4 pl-8">{section.label}</h2>
+            <h2 className="pt-4 sm:pl-8">{section.label}</h2>
           </div>
         );
       })}

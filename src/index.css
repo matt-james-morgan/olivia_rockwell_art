@@ -256,6 +256,14 @@ body {
   overflow-x: clip;
 }
 
+/* iOS Safari ignores overflow on <body>, so clip again on the app wrapper.
+   min-width: 0 stops #root (a flex child of body) growing to fit wide content. */
+#root {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
