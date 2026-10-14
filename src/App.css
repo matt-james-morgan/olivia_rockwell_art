@@ -39,3 +39,10 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Phones: less outer padding so artwork gets more of the screen width */
+@media (max-width: 640px) {
+  #root {
+    padding: 16px;
+  }
+}

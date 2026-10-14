@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { SECTIONS } from "../constants/Sections";
 import { useNavigate } from "react-router-dom";
+import { activateOnKey } from "@/lib/a11y";
 
 const Nav = () => {
   const navigate = useNavigate();
@@ -13,8 +14,11 @@ const Nav = () => {
   };
 
   return (
-    <div className="w-full flex justify-between items-center px-4 py-2 bg-red">
+    <div className="w-full flex justify-between items-center px-0 sm:px-4 py-2 bg-red">
       <div
+        role="link"
+        tabIndex={0}
+        onKeyDown={activateOnKey}
         className="text-3xl font-light cursor-pointer"
         onClick={() => handleNav("/")}
       >
@@ -26,23 +30,35 @@ const Nav = () => {
 
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <div className="p-4 rounded-md cursor-pointer">
+          <div
+            role="button"
+            tabIndex={0}
+            onKeyDown={activateOnKey}
+            aria-label="Open menu"
+            className="-mr-2 flex h-12 w-12 shrink-0 items-center justify-center rounded-md cursor-pointer"
+          >
             <HamburgerIcon />
           </div>
         </SheetTrigger>
         <SheetContent side="right" className="bg-[#fdeaca]">
-          <div className="flex flex-col gap-4 mt-16 bg-[#fdeaca]">
+          <div className="flex flex-col gap-1 mt-16 bg-[#fdeaca]">
             {SECTIONS.map((section) => (
               <div
                 key={section.label}
-                className="justify-start text-lg cursor-pointer hover:opacity-70 transition-opacity py-2 px-4 text-black"
+                role="link"
+                tabIndex={0}
+                onKeyDown={activateOnKey}
+                className="justify-start text-xl cursor-pointer hover:opacity-70 transition-opacity py-3 px-4 text-black"
                 onClick={() => handleNav(section.label)}
               >
                 <h2>{section.label}</h2>
               </div>
             ))}
             <div
-              className="justify-start text-lg cursor-pointer hover:opacity-70 transition-opacity py-2 px-4 text-black"
+              role="link"
+                tabIndex={0}
+                onKeyDown={activateOnKey}
+                className="justify-start text-xl cursor-pointer hover:opacity-70 transition-opacity py-3 px-4 text-black"
               onClick={() => handleNav("/about")}
             >
               <h2>About</h2>

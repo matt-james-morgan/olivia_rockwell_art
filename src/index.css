@@ -245,3 +245,23 @@ pre {
     @apply bg-background text-foreground;
   }
 }
+
+/* ── Mobile-first foundations ── */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  /* Safety net: nothing should ever cause sideways scrolling on phones */
+  overflow-x: clip;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

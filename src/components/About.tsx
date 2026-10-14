@@ -103,7 +103,7 @@ const About = () => {
                       variant="elegant"
                       size="sm"
                       asChild
-                      className="group w-48 text-sm"
+                      className="group w-48 h-11 text-sm"
                     >
                       <a
                         href="https://www.nwtarts.com/search/artists/olivia-rockwell"
@@ -120,7 +120,7 @@ const About = () => {
                       variant="subtle"
                       size="sm"
                       onClick={handleInstagramClick}
-                      className="group w-48 text-sm"
+                      className="group w-48 h-11 text-sm"
                     >
                       <InstagramIcon className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
                       <p>Instagram</p>
