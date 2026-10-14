@@ -30,6 +30,19 @@ const ScrollToTop = () => {
   return null;
 };
 
+// Fade the site in once the images on the first screen are ready (index.html caps the wait)
+const RevealOnLoad = () => {
+  useEffect(() => {
+    const firstScreen = [...document.images].filter(
+      (img) => img.getBoundingClientRect().top < window.innerHeight
+    );
+    Promise.all(firstScreen.map((img) => img.decode().catch(() => {}))).then(() =>
+      document.documentElement.classList.remove("is-loading")
+    );
+  }, []);
+  return null;
+};
+
 const SITE_URL = "https://olivia-rockwell-art.vercel.app";
 
 const PAGE_META: Record<string, { title: string; description: string }> = {
@@ -183,6 +196,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <RevealOnLoad />
       <PageMeta />
       <Nav />
       <AnimatedRoutes />

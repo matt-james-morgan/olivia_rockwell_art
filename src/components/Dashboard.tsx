@@ -1,6 +1,7 @@
 import { SECTIONS } from "../constants/Sections";
 import { useNavigate } from "react-router-dom";
 import { activateOnKey } from "@/lib/a11y";
+import FadeImage from "./FadeImage";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -22,11 +23,14 @@ const Dashboard = () => {
               handleNav(section.label);
             }}
           >
-            <img
-              className="block w-full aspect-[5/3] object-cover sm:w-125 sm:h-75 sm:aspect-auto"
-              src={section.image as string}
-              alt={section.label}
-            />
+            {/* Soft placeholder holds the tile's shape while the image fades in */}
+            <div className="bg-[#f3dcb4]">
+              <FadeImage
+                className="block w-full aspect-[5/3] object-cover sm:w-125 sm:h-75 sm:aspect-auto"
+                src={section.image as string}
+                alt={section.label}
+              />
+            </div>
             <h2 className="pt-4 sm:pl-8">{section.label}</h2>
           </div>
         );

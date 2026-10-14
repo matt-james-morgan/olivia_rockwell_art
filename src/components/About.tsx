@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import headshot from "@/assets/Olivia - Headshot.jpg";
+import FadeImage from "./FadeImage";
 
 // Custom Instagram SVG icon for better branding consistency
 const InstagramIcon = ({ className }: { className?: string }) => (
@@ -36,7 +37,7 @@ const About = () => {
           <aside className="flex-shrink-0 xl:w-2/5">
             <div className="sticky top-8">
               <div className="relative">
-                <img
+                <FadeImage
                   src={headshot}
                   alt="Portrait of artist Olivia Rockwell"
                   className="w-full max-w-[500px] mx-auto object-contain rounded-lg shadow-lg"
