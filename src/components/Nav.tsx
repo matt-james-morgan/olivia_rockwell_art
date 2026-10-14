@@ -3,6 +3,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { SECTIONS } from "../constants/Sections";
 import { useNavigate } from "react-router-dom";
 import { activateOnKey } from "@/lib/a11y";
+import { preloadGallery } from "@/lib/preload";
 
 const Nav = () => {
   const navigate = useNavigate();
@@ -49,6 +50,7 @@ const Nav = () => {
                 tabIndex={0}
                 onKeyDown={activateOnKey}
                 className="justify-start text-xl cursor-pointer hover:opacity-70 transition-opacity py-3 px-4 text-black"
+                onPointerDown={() => preloadGallery(section.label)}
                 onClick={() => handleNav(section.label)}
               >
                 <h2>{section.label}</h2>
