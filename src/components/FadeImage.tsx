@@ -21,7 +21,7 @@ const FadeImage = ({ className, onLoad, onError, ...props }: ImgHTMLAttributes<H
         setLoaded(true);
         onError?.(e);
       }}
-      className={cn("transition-opacity duration-700 ease-out", loaded ? "opacity-100" : "opacity-0", className)}
+      className={cn("transition-opacity duration-[1200ms] ease-out", loaded ? "opacity-100" : "opacity-0", className)}
     />
   );
 };

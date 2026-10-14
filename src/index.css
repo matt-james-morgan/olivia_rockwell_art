@@ -273,11 +273,3 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
-
-/* Whole-site fade-in on first load (class is added in index.html, removed in App.tsx) */
-#root {
-  transition: opacity 0.6s ease-out;
-}
-html.is-loading #root {
-  opacity: 0;
-}

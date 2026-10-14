@@ -20,26 +20,13 @@ import {
   SCREEN_PRINTS,
   WATERCOLOR_PAINTINGS,
 } from "./lib/images";
-import { AnimatePresence, motion } from "framer-motion";
+import PageFade from "./components/PageFade";
 
 const ScrollToTop = () => {
   const location = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
-  return null;
-};
-
-// Fade the site in once the images on the first screen are ready (index.html caps the wait)
-const RevealOnLoad = () => {
-  useEffect(() => {
-    const firstScreen = [...document.images].filter(
-      (img) => img.getBoundingClientRect().top < window.innerHeight
-    );
-    Promise.all(firstScreen.map((img) => img.decode().catch(() => {}))).then(() =>
-      document.documentElement.classList.remove("is-loading")
-    );
-  }, []);
   return null;
 };
 
@@ -107,88 +94,81 @@ const AnimatedRoutes = () => {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={location.pathname}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.3 }}
-      >
-        <Routes location={location}>
-          <Route path="/" element={<Dashboard />} />
-          <Route
-            path="/collage"
-            element={
-              <Gallery
-                images={Object.entries(COLLAGE).map(([label, image]) => ({
+    // Keyed by path so every page starts hidden and fades in once its pictures are ready
+    <PageFade key={location.pathname}>
+      <Routes location={location}>
+        <Route path="/" element={<Dashboard />} />
+        <Route
+          path="/collage"
+          element={
+            <Gallery
+              images={Object.entries(COLLAGE).map(([label, image]) => ({
+                label,
+                image: image as string,
+              }))}
+            />
+          }
+        />
+        <Route
+          path="/drawings"
+          element={
+            <Gallery
+              images={Object.entries(DRAWINGS).map(([label, image]) => ({
+                label,
+                image: image as string,
+              }))}
+            />
+          }
+        />
+        <Route
+          path="/illustration"
+          element={
+            <Gallery
+              images={Object.entries(ILLUSTRATION).map(([label, image]) => ({
+                label,
+                image: image as string,
+              }))}
+            />
+          }
+        />
+        <Route
+          path="/oil paintings"
+          element={
+            <Gallery
+              images={Object.entries(OIL_PAINTINGS).map(([label, image]) => ({
+                label,
+                image: image as string,
+              }))}
+            />
+          }
+        />
+        <Route
+          path="/screen prints"
+          element={
+            <Gallery
+              images={Object.entries(SCREEN_PRINTS).map(([label, image]) => ({
+                label,
+                image: image as string,
+              }))}
+            />
+          }
+        />
+        <Route
+          path="/watercolour paintings"
+          element={
+            <Gallery
+              images={Object.entries(WATERCOLOR_PAINTINGS).map(
+                ([label, image]) => ({
                   label,
                   image: image as string,
-                }))}
-              />
-            }
-          />
-          <Route
-            path="/drawings"
-            element={
-              <Gallery
-                images={Object.entries(DRAWINGS).map(([label, image]) => ({
-                  label,
-                  image: image as string,
-                }))}
-              />
-            }
-          />
-          <Route
-            path="/illustration"
-            element={
-              <Gallery
-                images={Object.entries(ILLUSTRATION).map(([label, image]) => ({
-                  label,
-                  image: image as string,
-                }))}
-              />
-            }
-          />
-          <Route
-            path="/oil paintings"
-            element={
-              <Gallery
-                images={Object.entries(OIL_PAINTINGS).map(([label, image]) => ({
-                  label,
-                  image: image as string,
-                }))}
-              />
-            }
-          />
-          <Route
-            path="/screen prints"
-            element={
-              <Gallery
-                images={Object.entries(SCREEN_PRINTS).map(([label, image]) => ({
-                  label,
-                  image: image as string,
-                }))}
-              />
-            }
-          />
-          <Route
-            path="/watercolour paintings"
-            element={
-              <Gallery
-                images={Object.entries(WATERCOLOR_PAINTINGS).map(
-                  ([label, image]) => ({
-                    label,
-                    image: image as string,
-                  })
-                )}
-              />
-            }
-          />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </motion.div>
-    </AnimatePresence>
+                })
+              )}
+            />
+          }
+        />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </PageFade>
   );
 };
 
@@ -196,7 +176,6 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <RevealOnLoad />
       <PageMeta />
       <Nav />
       <AnimatedRoutes />

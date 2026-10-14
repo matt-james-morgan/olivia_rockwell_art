@@ -54,12 +54,6 @@
         ]
       }
     </script>
-    <!-- Hide the site until the first images are ready (see RevealOnLoad in App.tsx), then fade it in.
-         The timer is a safety net so a slow image or a script error never leaves a blank page. -->
-    <script>
-      document.documentElement.classList.add("is-loading");
-      setTimeout(function () { document.documentElement.classList.remove("is-loading"); }, 1200);
-    </script>
   </head>
   <body>
     <div id="root"></div>
