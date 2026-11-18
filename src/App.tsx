@@ -30,7 +30,7 @@ const ScrollToTop = () => {
   return null;
 };
 
-const SITE_URL = "https://olivia-rockwell-art.vercel.app";
+const SITE_URL = "https://www.orockwell-fineart.com";
 
 const PAGE_META: Record<string, { title: string; description: string }> = {
   "/": {

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://olivia-rockwell-art.vercel.app/sitemap.xml
+Sitemap: https://www.orockwell-fineart.com/sitemap.xml
